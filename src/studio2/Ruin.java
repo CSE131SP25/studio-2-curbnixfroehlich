@@ -14,8 +14,7 @@ public class Ruin {
 		int winLimit = in.nextInt();
 		System.out.print("Total Simulations: ");
 		int totalSimulations = in.nextInt();
-		int wins = 0;
-		int losses = 0;
+		int ruins = 0;
 		
 	
 		for (int i = 1; i <= totalSimulations; i++) {
@@ -30,14 +29,13 @@ public class Ruin {
 			}
 			if (currentAmount == 0) {
 				System.out.println("Simulation " + i + ": LOSE");
-				losses++;
+				ruins++;
 			} else {
 				System.out.println("Simulation " + i + ": WIN" );
-				wins++;
 			}
 			
 		}
-		System.out.println("Ruin rate from sim: " + (double) losses/totalSimulations);
+		System.out.println("Ruin rate from sim: " + (double) ruins/totalSimulations);
 
 	}
 
